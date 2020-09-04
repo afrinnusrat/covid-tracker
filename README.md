@@ -3,4 +3,8 @@
 ### `npm start`
 
 - Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-- Clean up the project
+
+# Create React Project
+
+- `$ npx create-react-app .`
+- Bersihin file2 dan program2 yg tidak terpakai
