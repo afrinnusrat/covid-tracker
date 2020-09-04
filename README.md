@@ -16,3 +16,8 @@
 3. Create website name for the project
 4. Install firebase-tools `$ npm install -g firebase-tools`
 5. Login to firebase `$ firebase login`
+
+# Install Material UI
+
+1. Open [https://material-ui.com/getting-started/installation/](https://material-ui.com/getting-started/installation/)
+2. Install material-ui `$ npm install @material-ui/core`
