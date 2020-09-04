@@ -5,6 +5,7 @@ import "./App.css";
 function App() {
   // https://disease.sh/v3/covid-19/countries
   const [countries, setCountries] = useState([]);
+  const [country, setCountry] = useState("worldwide");
 
   // useEffect runs a piece of code based on a given condition
   // The code inside here will run once when the component loads and not again
@@ -24,6 +25,12 @@ function App() {
     getCountriesData(countries);
   }, []);
 
+  const onCountryChange = async (event) => {
+    const countryCode = event.target.value;
+    // console.log("Kodenya -->> ", countryCode);
+    setCountry(countryCode);
+  };
+
   return (
     <div className="app">
       {/* Header */}
@@ -31,7 +38,8 @@ function App() {
         <h1>Covid-19 Tracker</h1>
         {/* Title + Select Input dropdow field */}
         <FormControl className="app__dropdown">
-          <Select variant="outlined" value="abc">
+          <Select variant="outlined" onChange={onCountryChange} value={country}>
+            <MenuItem value="worldwide">Worldwide</MenuItem>
             {/* Loop through all the countries and show a drop down list of the options */}
             {countries.map((country) => (
               <MenuItem value={country.value}>{country.name}</MenuItem>
