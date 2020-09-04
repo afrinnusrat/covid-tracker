@@ -1,6 +1,6 @@
 import React from "react";
 import "./Map.css";
-import { Map as LeafletProvider, TileLayer } from "react-leaflet";
+import { Map as LeafletProvider, TileLayer } from "react-leaflet"; // LeafletProvider, LeafletConsumer, LeafletContext, LeafletEvents
 
 function Map({ center, zoom }) {
   return (
