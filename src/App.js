@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { MenuItem, FormControl, Select } from "@material-ui/core";
 import "./App.css";
 import InfoBox from "./InfoBox";
+import Map from "./Map";
 
 function App() {
   // https://disease.sh/v3/covid-19/countries
@@ -60,10 +61,11 @@ function App() {
         <InfoBox title="Death" cases={1115} total={500} />
       </div>
 
+      {/* Map */}
+      <Map />
+
       {/* Table */}
       {/* Graph */}
-
-      {/* Map */}
     </div>
   );
 }
