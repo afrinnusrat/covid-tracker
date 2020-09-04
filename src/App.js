@@ -16,6 +16,14 @@ function App() {
   const [country, setCountry] = useState("worldwide");
   const [countryInfo, setCountryInfo] = useState([]);
 
+  useEffect(() => {
+    fetch("https://disease.sh/v3/covid-19/all")
+      .then((response) => response.json())
+      .then((data) => {
+        setCountryInfo(data);
+      });
+  }, []);
+
   // useEffect runs a piece of code based on a given condition
   // The code inside here will run once when the component loads and not again
   useEffect(() => {
