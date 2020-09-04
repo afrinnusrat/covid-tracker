@@ -122,6 +122,7 @@ function App() {
 
           {/* InfoBoxs */}
           <InfoBox
+            isRed
             active={casesType === "deaths"}
             onClick={(e) => setCasesType("deaths")}
             title="Deaths"
