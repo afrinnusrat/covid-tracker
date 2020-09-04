@@ -126,7 +126,7 @@ function App() {
           <Table countries={tableData} />
 
           {/* Graph */}
-          <h3>Live Cases by Country</h3>
+          <h3>Live Cases by Worldwide</h3>
           <LineGraph />
         </CardContent>
       </Card>

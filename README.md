@@ -31,4 +31,9 @@
 
 # Install ChartJS 2
 
-`$ npm i react-chartjs-2`
+1. Goto [https://www.chartjs.org/](https://www.chartjs.org/)
+2. Install
+   `$ npm i react-chartjs-2 chart.js`
+3. Baca baca disini [https://www.chartjs.org/docs/latest/charts/line.html](https://www.chartjs.org/docs/latest/charts/line.html) bagian Point[]
+4. Install numeral
+   `$ npm i numeral`
