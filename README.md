@@ -28,3 +28,7 @@
 2. Click `Docs` Button
 3. Click GET button on countries <br/>
    `https://disease.sh/v3/covid-19/countries`
+
+# Install ChartJS 2
+
+`$ npm i react-chartjs-2`
