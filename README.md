@@ -42,3 +42,5 @@
 
 1. Install<br/>
    `$ npm i react-leaflet`
+   atau
+   `$ npm install react-leaflet leaflet`
