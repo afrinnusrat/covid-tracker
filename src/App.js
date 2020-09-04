@@ -84,7 +84,7 @@ function App() {
       <div className="app__left">
         {/* Header */}
         <div className="app__header">
-          <h1>Covid-19 Tracker</h1>
+          <h1>COVID-19 TRACKER</h1>
           {/* Title + Select Input dropdow field */}
           <FormControl className="app__dropdown">
             <Select

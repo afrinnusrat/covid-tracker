@@ -5,11 +5,16 @@
 .app {
   display: flex;
   justify-content: space-evenly;
+  padding: 20px;
 }
 
 body {
   background-color: #f5f6fa;
-  padding: 20px;
+}
+
+.app__header > h1 {
+  color: #fc3c3c;
+  font-size: 2rem;
 }
 
 .app__header {
