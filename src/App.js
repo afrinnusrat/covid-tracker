@@ -14,6 +14,7 @@ function App() {
   // https://disease.sh/v3/covid-19/countries
   const [countries, setCountries] = useState([]);
   const [country, setCountry] = useState("worldwide");
+  const [countryInfo, setCountryInfo] = useState([]);
 
   // useEffect runs a piece of code based on a given condition
   // The code inside here will run once when the component loads and not again
@@ -37,7 +38,23 @@ function App() {
     const countryCode = event.target.value;
     // console.log("Kodenya -->> ", countryCode);
     setCountry(countryCode);
+
+    // https://disease.sh/v3/covid-19/all
+    // https://disease.sh/v3/covid-19/countries/[COUNTRY_CODE]
+    const url =
+      countryCode === "worldwide"
+        ? "https://disease.sh/v3/covid-19/all"
+        : `https://disease.sh/v3/covid-19/countries/${countryCode}`;
+
+    await fetch(url)
+      .then((response) => response.json())
+      .then((data) => {
+        setCountry(countryCode);
+        setCountryInfo(data); // All of data from the country response
+      });
   };
+
+  console.log("Country Info >>>", countryInfo);
 
   return (
     <div className="app">
