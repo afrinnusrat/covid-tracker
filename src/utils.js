@@ -5,15 +5,15 @@ import "./Map.css";
 
 const casesTypeColors = {
   cases: {
-    hex: "#CC1034",
+    hex: "#FFA500",
     multiplier: 800,
   },
-  recivered: {
+  recovered: {
     hex: "#7dd71d",
     multiplier: 1200,
   },
   deaths: {
-    hex: "#fb4443",
+    hex: "#CC1034",
     multiplier: 2000,
   },
 };
