@@ -10,6 +10,7 @@ import "./App.css";
 import InfoBox from "./InfoBox";
 import Map from "./Map";
 import Table from "./Table";
+import { sortData } from "./utils";
 
 function App() {
   // https://disease.sh/v3/covid-19/countries
@@ -38,8 +39,9 @@ function App() {
             name: country.country, // UnitedStated, United Kingdom, etc
             value: country.countryInfo.iso2, // UK, USA, FR
           }));
+          const sortedData = sortData(data);
           setCountries(countries);
-          setTableData(data);
+          setTableData(sortedData);
         });
     };
     getCountriesData(countries);
