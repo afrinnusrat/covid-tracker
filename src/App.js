@@ -1,8 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import { MenuItem, FormControl, Select } from "@material-ui/core";
 import "./App.css";
 
 function App() {
+  const [countries, setCountries] = useState([
+    "USA",
+    "UK",
+    "India",
+    "Indonesia",
+  ]);
+
   return (
     <div className="app">
       {/* Header */}
@@ -11,10 +18,10 @@ function App() {
         {/* Title + Select Input dropdow field */}
         <FormControl className="app__dropdown">
           <Select variant="outlined" value="abc">
-            <MenuItem value="z">Worldwide</MenuItem>
-            <MenuItem value="a">Option 2</MenuItem>
-            <MenuItem value="b">Option 3</MenuItem>
-            <MenuItem value="c">Yeeeee</MenuItem>
+            {/* Loop through all the countries and show a drop down list of the options */}
+            {countries.map((country) => (
+              <MenuItem value={country}>{country}</MenuItem>
+            ))}
           </Select>
         </FormControl>
       </div>
