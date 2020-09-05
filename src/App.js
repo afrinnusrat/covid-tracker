@@ -56,7 +56,7 @@ function App() {
 
   const onCountryChange = async (event) => {
     const countryCode = event.target.value;
-    // console.log("Kodenya -->> ", countryCode);
+    console.log("Kodenya -->> ", countryCode);
     setCountry(countryCode);
 
     // https://disease.sh/v3/covid-19/all
@@ -66,15 +66,24 @@ function App() {
         ? "https://disease.sh/v3/covid-19/all"
         : `https://disease.sh/v3/covid-19/countries/${countryCode}`;
 
-    await fetch(url)
-      .then((response) => response.json())
-      .then((data) => {
-        setCountry(countryCode);
-        setCountryInfo(data); // All of data from the country response
-        console.log(data.countryInfo);
-        setMapCenter([data.countryInfo.lat, data.countryInfo.long]);
-        setMapZoom(4);
-      });
+    {
+      countryCode === "worldwide"
+        ? fetch("https://disease.sh/v3/covid-19/all")
+            .then((response) => response.json())
+            .then((data) => {
+              setCountryInfo(data);
+              setMapZoom(3);
+            })
+        : await fetch(url)
+            .then((response) => response.json())
+            .then((data) => {
+              setCountry(countryCode);
+              setCountryInfo(data); // All of data from the country response
+              console.log("DATA INFO NEGARA ", data.countryInfo);
+              setMapCenter([data.countryInfo.lat, data.countryInfo.long]);
+              setMapZoom(4);
+            });
+    }
   };
 
   console.log("Country Info >>>", countryInfo);
