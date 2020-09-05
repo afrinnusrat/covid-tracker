@@ -28,3 +28,19 @@
 2. Click `Docs` Button
 3. Click GET button on countries <br/>
    `https://disease.sh/v3/covid-19/countries`
+
+# Install ChartJS 2
+
+1. Goto [https://www.chartjs.org/](https://www.chartjs.org/)
+2. Install
+   `$ npm i react-chartjs-2 chart.js`
+3. Baca baca disini [https://www.chartjs.org/docs/latest/charts/line.html](https://www.chartjs.org/docs/latest/charts/line.html) bagian Point[]
+4. Install numeral
+   `$ npm i numeral`
+
+# Install for Map
+
+1. Install<br/>
+   `$ npm i react-leaflet`
+   atau
+   `$ npm install react-leaflet leaflet`
